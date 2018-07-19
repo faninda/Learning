@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:columnCount="1"
+    app:rowCount="2"
+    app:orientation="horizontal"
+    android:background="#93ede7"
+    tools:context=".MenuCutiActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#fff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_column="0"
+        app:layout_row="0">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="46dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:onClick="calendar"
+            android:layout_marginStart="26dp"
+            app:srcCompat="@drawable/calendar"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="21dp"
+            android:onClick="CutiTahunandanIjin"
+            android:text="Cuti Tahunan dan Ijin"
+            android:textColor="#09659e"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#fff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_column="0"
+        app:layout_row="1">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:onClick="pregnant"
+            android:layout_width="46dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="26dp"
+            app:srcCompat="@drawable/pregnant"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="89dp"
+            android:text="Cuti Hamil"
+            android:onClick="CutiHamil"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#09659e"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:onClick="happy"
+            android:layout_width="46dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="26dp"
+            app:srcCompat="@drawable/happy"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="90dp"
+            android:text="Cuti Besar"
+            android:onClick="CutiBesar"
+            android:textColor="#09659e"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.GridLayout>

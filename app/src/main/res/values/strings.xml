@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PengajuanCuti</string>
+
+    <string name="todo">TODO</string>
+    <string name="history">History</string>
+    <string name="cuti">Cuti</string>
+    <string name="cuti_tahunan">Cuti Tahunan</string>
+    <string name="cuti_ijin">Cuti Ijin</string>
+    <string name="cuti_besar">Cuti Besar</string>
+    <string name="cuti_hamil">Cuti Hamil</string>
+</resources>
