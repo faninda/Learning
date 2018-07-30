@@ -3,33 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#93ede7"
     android:layout_height="match_parent"
-    tools:context=".CutiBesarActivity">
+    tools:context=".activity.CutiBesarActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ff9914">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:text=" CUTI BESAR "
-                android:textAlignment="center"
-                android:textColor="#fff"
-                android:textStyle="bold" />
-        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -50,6 +32,7 @@
 
                 <EditText
                     android:id="@+id/isiNIP"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Masukkan ID" />
@@ -77,9 +60,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:inputType="date"
-                    android:focusable="false"
-                    android:textIsSelectable="false"
-                    android:longClickable="false"/>
+                    android:textIsSelectable="false" />
+                <!--android:longClickable="false" -->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -94,9 +76,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:inputType="date"
-                    android:focusable="false"
-                    android:textIsSelectable="false"
-                    android:longClickable="false"/>
+                    android:textIsSelectable="false" />
+                <!--android:longClickable="false" -->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -108,6 +89,7 @@
                     android:id="@+id/Keperluan1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="Keperluan"
                     android:text="" />
 
@@ -134,9 +116,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:inputType="date"
-                    android:focusable="false"
-                    android:textIsSelectable="false"
-                    android:longClickable="false"/>
+                    android:textIsSelectable="false" />
+                <!--android:longClickable="false" -->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -151,9 +132,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:inputType="date"
-                    android:focusable="false"
-                    android:textIsSelectable="false"
-                    android:longClickable="false"/>
+                    android:textIsSelectable="false" />
+                <!--android:longClickable="false" -->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -164,6 +144,7 @@
                     android:id="@+id/Keperluan2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="Keperluan"
                     android:text="" />
 
@@ -177,6 +158,7 @@
                     android:id="@+id/Tempat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="Tempat"
                     android:text="" />
 
@@ -184,13 +166,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
-                    android:text="Telp :" />
+                    android:text="Telp dihubungi:" />
 
                 <EditText
                     android:id="@+id/Telp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telp"
+                    android:inputType="phone"
+                    android:hint="+628 xxx"
                     android:text="" />
 
                 <Button

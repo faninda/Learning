@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#93ede7"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.CutiTahunanIjinActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:background="#fff"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ff9914">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:text="FORM CUTI"
-                android:textAlignment="center"
-                android:textColor="#fff"
-                android:textStyle="bold" />
-        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -51,6 +35,7 @@
                     android:id="@+id/isiNomor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="2018/19/CUTI/001" />
 
                 <TextView
@@ -64,11 +49,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:focusable="false"
                     android:hint="dd-mm-yy"
-                    android:inputType="date"
-                    android:longClickable="false"
-                    android:textIsSelectable="false" />
+                    android:inputType="none" />
+                  <!-- android:longClickable="false"-->
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -80,29 +64,8 @@
                     android:id="@+id/isiID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="number"
                     android:hint="Masukan ID" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="32dp"
-                    android:textColor="#000"
-                    android:text="Jenis Kelamin:" />
-
-                <RadioGroup
-                    android:id="@+id/jk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Laki - laki" />
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Perempuan" />
-                </RadioGroup>
 
 
                 <TextView
@@ -115,6 +78,7 @@
                     android:id="@+id/Jumlah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="number"
                     android:hint="Jumlah"
                     android:text="" />
 
@@ -129,11 +93,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:focusable="false"
-                    android:inputType="date"
-                    android:longClickable="false"
                     android:hint="dd-mm-yy"
-                    android:textIsSelectable="false" />
+                    android:inputType="none" />
+                    <!--android:longClickable="false"-->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -146,11 +108,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:focusable="false"
-                    android:inputType="date"
-                    android:longClickable="false"
                     android:hint="dd-mm-yy"
-                    android:textIsSelectable="false" />
+                    android:inputType="none" />
+                    <!-- android:longClickable="false" -->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -162,6 +122,7 @@
                     android:id="@+id/Keperluan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="Keperluan"
                     android:text="" />
 
@@ -175,6 +136,7 @@
                     android:id="@+id/Tempat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="Tempat"
                     android:text="" />
 
@@ -182,13 +144,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
-                    android:text="Telp :" />
+                    android:text="Telp dihubungi :" />
 
                 <EditText
                     android:id="@+id/Telp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telp"
+                    android:inputType="phone"
+                    android:hint="+628 xxx"
                     android:text="" />
 
                 <TextView
@@ -201,6 +164,7 @@
                     android:id="@+id/Pelimpahan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="text"
                     android:hint="Kepada"
                     android:text="" />
                 <Button

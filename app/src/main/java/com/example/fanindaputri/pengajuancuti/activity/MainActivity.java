@@ -1,9 +1,12 @@
-package com.example.fanindaputri.pengajuancuti;
+package com.example.fanindaputri.pengajuancuti.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.fanindaputri.pengajuancuti.R;
+import com.example.fanindaputri.pengajuancuti.recycleview.HistoryActivity;
 
 public class MainActivity extends AppCompatActivity {
 

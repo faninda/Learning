@@ -8,12 +8,14 @@
     app:rowCount="2"
     app:orientation="horizontal"
     android:background="#93ede7"
-    tools:context=".MenuCutiActivity">
+    tools:context=".activity.MenuCutiActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
+        android:id="@+id/kotak1"
+        android:onClick="kotak1"
         android:background="#fff"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -28,10 +30,8 @@
             android:layout_height="47dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:onClick="calendar"
             android:layout_marginStart="26dp"
-            app:srcCompat="@drawable/calendar"
-            tools:ignore="OnClick" />
+            app:srcCompat="@drawable/calendar"/>
 
         <TextView
             android:id="@+id/textView"
@@ -40,17 +40,17 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="21dp"
-            android:onClick="CutiTahunandanIjin"
             android:text="Cuti Tahunan dan Ijin"
             android:textColor="#09659e"
             android:textSize="20dp"
-            android:textStyle="bold"
-            tools:ignore="OnClick" />
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
+        android:id="@+id/kotak2"
+        android:onClick="kotak2"
         android:background="#fff"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -61,14 +61,12 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:onClick="pregnant"
             android:layout_width="46dp"
             android:layout_height="47dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="26dp"
-            app:srcCompat="@drawable/pregnant"
-            tools:ignore="OnClick" />
+            app:srcCompat="@drawable/pregnant" />
 
         <TextView
             android:id="@+id/textView2"
@@ -78,18 +76,18 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="89dp"
             android:text="Cuti Hamil"
-            android:onClick="CutiHamil"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#09659e"
             android:textSize="20dp"
-            android:textStyle="bold"
-            tools:ignore="OnClick" />
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
+        android:id="@+id/kotak3"
+        android:onClick="kotak3"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
@@ -97,14 +95,12 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:onClick="happy"
             android:layout_width="46dp"
             android:layout_height="47dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="26dp"
-            app:srcCompat="@drawable/happy"
-            tools:ignore="OnClick" />
+            app:srcCompat="@drawable/happy" />
 
         <TextView
             android:id="@+id/textView3"
@@ -114,11 +110,9 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="90dp"
             android:text="Cuti Besar"
-            android:onClick="CutiBesar"
             android:textColor="#09659e"
             android:textSize="20dp"
-            android:textStyle="bold"
-            tools:ignore="OnClick" />
+            android:textStyle="bold"/>
     </RelativeLayout>
 
 

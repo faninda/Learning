@@ -1,20 +1,25 @@
-package com.example.fanindaputri.pengajuancuti;
+package com.example.fanindaputri.pengajuancuti.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.app.DatePickerDialog;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.fanindaputri.pengajuancuti.R;
 
 import java.util.Calendar;
 
-public class CutiHamilActivity extends AppCompatActivity implements View.OnClickListener {
+public class CutiBesarActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button bsimpan;
     EditText eNIP, etanggalmulai1, etanggalakhir1, eKeperluan1, eMulai, etgl_akhir2, eKeperluan2, eTempat, eTelp;
     TextView ttahap1, ttahap2, thasil;
+
 
     private EditText tanggalmulai1, tanggalakhir1, tanggalmulai, tanggalakhir;
     private int mYear, mMonth, mDay;
@@ -22,7 +27,7 @@ public class CutiHamilActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cuti_hamil);
+        setContentView( R.layout.activity_cuti_besar);
 
         tanggalmulai1 = (EditText) findViewById(R.id.tanggalmulai1);
         tanggalakhir1 = (EditText) findViewById(R.id.tanggalakhir1);
@@ -63,17 +68,63 @@ public class CutiHamilActivity extends AppCompatActivity implements View.OnClick
                 String inputTempat = String.valueOf(eTempat.getText().toString());
                 String inputTelp = String.valueOf(eTelp.getText().toString());
 
+                    //validasi
+                if (TextUtils.isEmpty( eNIP.getText().toString() ) || eNIP.getText().toString().length() == 0) {
+                    eNIP.setError( "Masukkan ID!" );
+                    eNIP.requestFocus(); // kalau uda selesai pindah ke satunya validasinya
+
+                }else if (TextUtils.isEmpty( etanggalmulai1.getText().toString() )) {
+                    etanggalmulai1.setError( "Masukkan TGL Mulai Cuti!" );
+                    etanggalmulai1.requestFocus();
+
+                }else if (TextUtils.isEmpty( etanggalakhir1.getText().toString() )) {
+                    etanggalmulai1.setError( null );
+                    etanggalakhir1.setError( "Masukkan TGL Akhir Cuti!" );
+                    etanggalakhir1.requestFocus();
+
+                } else if (TextUtils.isEmpty( eKeperluan1.getText().toString() ) || eKeperluan1.getText().toString().length() == 0) {
+                    etanggalakhir1.setError( null );
+                    eKeperluan1.setError( "Masukkan Keperluan!" );
+                    eKeperluan1.requestFocus();
+
+                }else if (TextUtils.isEmpty( eMulai.getText().toString() )) {
+                    eMulai.setError( "Masukkan TGL Mulai Cuti!" );
+                    eMulai.requestFocus();
+
+                }else if (TextUtils.isEmpty( etgl_akhir2.getText().toString() )) {
+                    eMulai.setError( null );
+                    etgl_akhir2.setError( "Masukkan TGL Akhir Cuti!" );
+                    etgl_akhir2.requestFocus();
+
+                } else if (TextUtils.isEmpty( eKeperluan2.getText().toString() ) || eKeperluan2.getText().toString().length() == 0) {
+                    etgl_akhir2.setError( null );
+                    eKeperluan2.setError( "Masukkan Keperluan!" );
+                    eKeperluan2.requestFocus();
+
+                } else if (TextUtils.isEmpty( eTempat.getText().toString() ) || eTempat.getText().toString().length() == 0) {
+                    eTempat.setError( "Masukkan Alamat!" );
+                    eTempat.requestFocus();
+
+                } else if (TextUtils.isEmpty( eTelp.getText().toString() ) || eTelp.getText().toString().length() == 0) {
+                    eTelp.setError( "Masukkan No Telephone!" );
+                    eTelp.requestFocus();
+                }else {
+                    //jika form sudah terisi semua maka registrasi berhasil
+                    Toast.makeText(getApplicationContext(), "Registrasi Berhasil!",
+                            Toast.LENGTH_SHORT).show();
+
 
                 thasil.setText("\n" +
-                        "NIP  \t\t\t\t\t\t\t\t: " + inputNIP + "\n" +
+                        "NIP  \t\t\t\t\t\t\t: " + inputNIP + "\n" +
                         "Tanggal Mulai\t\t\t: " + inputTanggal_Mulai + "\n" +
                         "Tanggal Akhir\t\t\t: " + inputtgl_akhir1 + "\n" +
                         "Keperluan  \t\t\t\t: " + inputKeperluan1 + "\n" +
                         "Tanggal Mulai\t\t\t: " + inputMulai + "\n" +
-                        "Tanggal akhir  \t\t: " + inputtgl_akhir2 + "\n" +
+                        "Tanggal akhir  \t\t\t: " + inputtgl_akhir2 + "\n" +
                         "Keperluan\t\t\t\t\t: " + inputKeperluan2 + "\n" +
                         "Tempat \t\t\t\t\t\t: " + inputTempat + "\n" +
                         "Telepone \t\t\t\t\t: " + inputTelp + "\n");
+            }
             }
         });
     }
@@ -111,4 +162,5 @@ public class CutiHamilActivity extends AppCompatActivity implements View.OnClick
     }
 
 }
+
 

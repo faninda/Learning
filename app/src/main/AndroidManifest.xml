@@ -9,19 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuCutiActivity" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".CutiTahunanIjinActivity" />
-        <activity android:name=".CutiHamilActivity" />
-        <activity android:name=".CutiBesarActivity" />
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".activity.MenuCutiActivity" />
+        <activity android:name=".activity.CutiTahunanIjinActivity" />
+        <activity android:name=".activity.CutiHamilActivity" />
+        <activity android:name=".activity.CutiBesarActivity" />
+        <activity android:name=".recycleview.HistoryActivity" />
     </application>
 
 </manifest>
